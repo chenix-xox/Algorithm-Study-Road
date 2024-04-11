@@ -1,6 +1,6 @@
-import Model.ListNode;
+package nowcoder;
 
-import java.util.Optional;
+import Model.ListNode;
 
 /**
  * @author Chenix

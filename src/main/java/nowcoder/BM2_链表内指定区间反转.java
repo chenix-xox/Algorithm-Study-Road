@@ -1,8 +1,7 @@
+package nowcoder;
+
 import Model.ListNode;
 import utils.LinkListUtils;
-
-import java.util.List;
-import java.util.Stack;
 
 /**
  * @author Chenix

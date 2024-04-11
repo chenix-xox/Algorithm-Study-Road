@@ -1,3 +1,5 @@
+package nowcoder;
+
 import Model.ListNode;
 
 import java.util.HashSet;

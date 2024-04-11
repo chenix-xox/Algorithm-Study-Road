@@ -1,9 +1,9 @@
+package nowcoder;
+
 import Model.ListNode;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 /**
  * @author Chenix

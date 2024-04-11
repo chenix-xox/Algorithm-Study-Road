@@ -1,3 +1,5 @@
+package nowcoder;
+
 import Model.ListNode;
 import utils.LinkListUtils;
 
