@@ -6,7 +6,7 @@ import java.util.*;
  * @author Chenix
  * @create_date 2024/4/11 21:58
  */
-public class Hot100_字母异位词分组 {
+public class Hot100_2_字母异位词分组 {
     // 自己想的：计算各个ASCII码值的和，计算，可能存在三个字母ASCII值相同的情况
     public List<List<String>> groupAnagramsTest(String[] strs) {
         List<List<String>> result = new ArrayList<>();
@@ -60,7 +60,7 @@ public class Hot100_字母异位词分组 {
 
     public static void main(String[] args) {
         String[] strs = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
-        Hot100_字母异位词分组 groupAnagrams = new Hot100_字母异位词分组();
+        Hot100_2_字母异位词分组 groupAnagrams = new Hot100_2_字母异位词分组();
         System.out.println(groupAnagrams.groupAnagrams(strs));
     }
 }
