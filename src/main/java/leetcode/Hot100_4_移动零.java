@@ -2,6 +2,8 @@ package leetcode;
 
 import Model.ListNode;
 
+import java.util.Arrays;
+
 /**
  * @author Chenix
  * @create_date 2024/4/14 12:24
@@ -11,17 +13,30 @@ import Model.ListNode;
  */
 public class Hot100_4_移动零 {
     public void moveZeroes(int[] nums) {
-        ListNode head = new ListNode(-1);
-        ListNode numHead = new ListNode(-1);
-        head.next = numHead;
-        for (int num : nums){
-            numHead.next = new ListNode(num);
-            numHead = numHead.next;
+        int val = 0;
+        int tail = removeVal(nums, val);
+        System.out.println(tail);
+        while (tail < nums.length){
+            nums[tail++] = val;
         }
+        System.out.println(Arrays.toString(Arrays.stream(nums).toArray()));
+    }
 
-        while (head.next != null){
-            System.out.println(head.val);
+
+    public static int removeVal(int[] nums,int val){
+        // 双指针
+        int fast = 0, slow = 0;
+        while (fast < nums.length){
+            if (nums[fast] != val){
+                // 快指针指到的不为目标值，慢指针就需要移动了
+                // 慢指针要让自己的数组内永远为 不为目标值的值
+                // 因此如下
+                nums[slow] = nums[fast];
+                slow++;
+            }
+            fast++;
         }
+        return slow;
     }
 
     public static void main(String[] args) {
