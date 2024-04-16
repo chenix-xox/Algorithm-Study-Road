@@ -15,5 +15,6 @@ import java.util.List;
 public class Hot100_6_三数之和 {
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
+        return null;
     }
 }
