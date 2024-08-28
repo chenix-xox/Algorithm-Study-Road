@@ -6,6 +6,7 @@ import com.alibaba.fastjson.JSON;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author chenix
@@ -24,9 +25,9 @@ import java.util.List;
  */
 public class Hot_100_94_二叉树的中序遍历 {
 
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal_dsf(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        if (root == null){
+        if (root == null) {
             return result;
         }
         // 先把左边的全部加进来，再把其根节点也加进来，再加上其右节点
@@ -36,6 +37,21 @@ public class Hot_100_94_二叉树的中序遍历 {
         result.addAll(inorderTraversal(root.getLeft()));
         result.add(root.getVal());
         result.addAll(inorderTraversal(root.getRight()));
+        return result;
+    }
+
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.getLeft();
+            }
+            root = stack.pop();
+            result.add(root.getVal());
+            root = root.getRight();
+        }
         return result;
     }
 
