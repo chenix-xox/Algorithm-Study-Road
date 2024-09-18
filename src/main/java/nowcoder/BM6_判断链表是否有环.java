@@ -1,6 +1,6 @@
 package nowcoder;
 
-import Model.ListNode;
+import model.ListNode;
 
 /**
  * 牛客面试Top101其一

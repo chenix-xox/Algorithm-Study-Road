@@ -1,6 +1,6 @@
 package leetcode;
 
-import Model.ListNode;
+import model.ListNode;
 
 /**
  * @author Chenix

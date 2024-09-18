@@ -1,6 +1,6 @@
 package nowcoder;
 
-import Model.ListNode;
+import model.ListNode;
 
 /**
  * @author Chenix

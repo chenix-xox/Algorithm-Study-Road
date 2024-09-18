@@ -1,7 +1,5 @@
 package leetcode;
 
-import Model.ListNode;
-
 import java.util.Arrays;
 
 /**

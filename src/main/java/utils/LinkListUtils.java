@@ -1,6 +1,6 @@
 package utils;
 
-import Model.ListNode;
+import model.ListNode;
 
 import java.util.Stack;
 
